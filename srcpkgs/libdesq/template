@@ -1,0 +1,22 @@
+# Template file for 'libdesq'
+pkgname=libdesq
+version=0.0.8
+revision=1
+wrksrc=desqcore
+archs="x86_64"
+build_style=meson
+
+hostmakedepends="git pkg-config cmake"
+makedepends="qt5-devel"
+depends=""
+short_desc="Desq core lib"
+maintainer="Andrey <ynomadaa@yandex.ru>"
+license="GPL-3.0-or-later"
+homepage="https://gitlab.com/DesQ/libdesq"
+#changelog=""
+#distfiles=""
+#checksum=badbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadb
+
+do_fetch() {
+  git clone "https://gitlab.com/DesQ/libdesq.git" ${wrksrc}
+}
